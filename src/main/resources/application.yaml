@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: Petshop
+
+  datasource:
+    url: jdbc:h2:mem:petshopdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true        # habilita o console web do H2
+      path: /h2-console    # URL -> http://localhost:8080/h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: update     # cria/atualiza tabelas automaticamente
+    show-sql: true         # mostra as queries no console
+    properties:
+      hibernate:
+        format_sql: true
