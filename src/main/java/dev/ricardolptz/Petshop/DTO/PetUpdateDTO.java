@@ -1,18 +1,15 @@
 package dev.ricardolptz.Petshop.DTO;
 
+import dev.ricardolptz.Petshop.model.Pet;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
 @Getter
-public class PetResponseDTO {
-    private Long id;
+@Setter
+public class PetUpdateDTO {
     private String nome;
     private Integer idade;
     private String raca;
-    private String tipo;
-    private double peso;
-
-    private UsuarioResumoDTO usuario;
-
+    private Double peso;
+    private Pet.TipoPet tipo;
 }

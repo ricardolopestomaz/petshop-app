@@ -1,6 +1,7 @@
 package dev.ricardolptz.Petshop.controller;
 
 import dev.ricardolptz.Petshop.DTO.PetResponseDTO;
+import dev.ricardolptz.Petshop.DTO.PetUpdateDTO;
 import dev.ricardolptz.Petshop.model.Pet;
 import dev.ricardolptz.Petshop.service.PetService;
 import org.springframework.http.HttpStatus;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/pet")
 public class PetController {
@@ -25,6 +27,14 @@ public class PetController {
     public ResponseEntity<PetResponseDTO> create(@RequestBody Pet pet){
         PetResponseDTO petDTO = petService.save(pet);
         return ResponseEntity.status(HttpStatus.CREATED).body(petDTO);
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<PetResponseDTO> updatePartial(
+            @PathVariable Long id,
+            @RequestBody PetUpdateDTO updates) {
+        PetResponseDTO updatedPet = petService.updatePartial(id, updates);
+        return ResponseEntity.ok(updatedPet);
     }
 
     @DeleteMapping("/{id}")

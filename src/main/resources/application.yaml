@@ -3,20 +3,16 @@ spring:
     name: Petshop
 
   datasource:
-    url: jdbc:h2:mem:petshopdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
-
-  h2:
-    console:
-      enabled: true        # habilita o console web do H2
-      path: /h2-console    # URL -> http://localhost:8080/h2-console
+    url: jdbc:mysql://localhost:3306/petshopdb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 6363
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
-      ddl-auto: update     # cria/atualiza tabelas automaticamente
-    show-sql: true         # mostra as queries no console
+      ddl-auto: update        # cria/atualiza as tabelas automaticamente
+    show-sql: true
     properties:
       hibernate:
         format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect

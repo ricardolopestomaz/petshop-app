@@ -9,23 +9,20 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "pet_table")
+@Table(name = "pet")
 public class Pet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(length = 100, nullable = false)
     private String nome;
-
     private Integer idade;
-
     @Column(length = 50)
     private String raca;
-
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20, nullable = false)
+    private TipoPet tipo;
     private double peso;
-
-    //RELACIONAMENTOS
 
     //PET - USUÁRIO
     @ManyToOne(fetch = FetchType.LAZY)
@@ -33,9 +30,11 @@ public class Pet {
     @JsonBackReference("usuario-pet")
     private Usuario usuario;
 
-    //PET - TIPO_PET
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tipo_pet_id", nullable = false)
-    @JsonBackReference("tipo-pet")
-    private TipoPet tipoPet;
+    public enum TipoPet {
+        CACHORRO,
+        GATO,
+        PASSARO,
+        PEIXE,
+        OUTRO
+    }
 }
