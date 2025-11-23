@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Animais</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header-user">
+      <a href="index.html" class="back-btn"> ← Voltar </a>
+      <h1 class="titulo">Cadastro de Animais</h1>
+    </header>
+
+    <main>
+      <section class="form-card">
+        <h2>Informações do Animal</h2>
+        <p class="subtitle">Registre um novo animal</p>
+
+         <!-- Tutor -->
+          <div class="input-group">
+            <label>Nome do Tutor</label>
+            <input
+              type="text"
+              placeholder="Comece a digitar para procurar"
+              id="tutorSearch"
+              autocomplete="off"
+              required
+            />
+            <ul id="tutorList" class="animal-list"></ul>
+          </div>
+
+        <form id="animalForm">
+          <!-- Nome -->
+          <div class="input-group">
+            <label>Nome do Animal</label>
+            <input type="text" placeholder="Digite o nome do animal" required />
+          </div>
+
+          <!--Espécie -->
+          <div class="input-group">
+            <label>Espécie</label>
+            <select id="especieSelect" required>
+              <option value="">Selecione</option>
+              <option value="cachorro">Cachorro</option>
+              <option value="gato">Gato</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="input-group" id="especieOutroGroup" style="display: none">
+            <label>Digite a espécie</label>
+            <input
+              type="text"
+              id="especieOutroInput"
+              placeholder="Ex: Coelho, Pássaro, Tartaruga..."
+            />
+          </div>
+
+          <!-- Raça -->
+          <div class="input-group">
+            <label>Raça</label>
+            <input type="text" placeholder="Digite a raça" />
+          </div>
+
+          <!--Idade -->
+          <div class="input-group">
+            <label>Idade</label>
+            <input type="number" placeholder="Idade em anos" min="0" max="50" />
+          </div>
+
+          <!--Peso -->
+          <div class="input-group">
+            <label>Peso</label>
+            <input type="number" min="0" placeholder="Ex: 3.50" step="0.50" required/>
+          </div>
+
+        
+
+          <button class="btn-user" type="submit">Cadastrar Animal</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="assets/js/especie.js"></script>
+  </body>
+</html>

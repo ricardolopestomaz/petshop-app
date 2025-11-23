@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Animal</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header-user">
+      <a href="animais.html" class="back-btn"> ← Voltar </a>
+      <h1 class="titulo">Editar Animal</h1>
+    </header>
+
+    <main>
+      <section class="form-card">
+        <h2>Atualizar Informações</h2>
+        <p class="subtitle">Edite os dados do animal</p>
+
+        <form id="editAnimalForm">
+          <!-- Nome -->
+          <div class="input-group">
+            <label>Nome</label>
+            <input type="text" id="nomeAnimal" value="Thor" required />
+          </div>
+
+          <!-- Espécie -->
+          <div class="input-group">
+            <label>Espécie</label>
+            <select id="especieAnimal" required>
+              <option value="">Selecione</option>
+              <option value="Cachorro" selected>Cachorro</option>
+              <option value="Gato">Gato</option>
+              <option value="Ave">Ave</option>
+              <option value="Roedor">Roedor</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+          <!-- Se escolher "Outro" -->
+          <div class="input-group" id="especieOutroGroup" style="display: none">
+            <label>Digite a espécie</label>
+            <input
+              type="text"
+              id="especieOutro"
+              placeholder="Ex: Coelho, Cavalo..."
+            />
+          </div>
+
+          <!-- Raça -->
+          <div class="input-group">
+            <label>Raça</label>
+            <input type="text" id="racaAnimal" value="Pitbull" required />
+          </div>
+
+          <!-- Idade -->
+          <div class="input-group">
+            <label>Idade</label>
+            <input type="text" id="idadeAnimal" value="4 anos" required />
+          </div>
+
+          <!-- Peso -->
+          <div class="input-group">
+            <label>Peso (kg)</label>
+            <input type="number" value="28.5" step="0.1" min="0" required />
+          </div>
+
+          <button class="btn-user" type="submit">Salvar Alterações</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="assets/js/especie.js"></script>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    background: #fab050;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card .btn {
+    display: block;
+    margin-top: 10px;
+    background: #d95793;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    width: 100%;
+}
+
+.card .btn:hover {
+    background:#e89dc3;
+}
+
+.acoes {
+    display: flex;
+    flex-direction:row;
+    gap: 10px;             
+    margin-top: 15px;
+}
+
+/*=== CADASTRO DO USUÁRIO === */
+.header-user {
+    background-color: #f4a742;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+}
+
+.back-btn {
+    position: absolute;
+    left: 50px;
+    border-radius: 5px;
+    background:#e6c392;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+.titulo {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.form-card {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.form-card h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: .2s;
+}
+
+.input-group input:focus {
+    border-color:#d95793;
+}
+
+.btn-user {
+    margin-top: 10px;
+    width: 100%;
+    padding: 14px;
+    background:#d95793;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-user:hover {
+    background:#e89dc3;
+}
+
+/*=== CADASTRO DO ANIMAL ===*/
+.animal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+    display: none;
+}
+
+.animal-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.animal-list li:hover {
+    background: #f0f0f0;
+}
+
+/*=== LISTA DE USUÁRIOS ===*/
+.table-card {
+    background: #fff;
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.top-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table thead {
+    background: #f9d6a5;
+}
+
+.user-table th {
+    padding: 14px;
+    font-size: 15px;
+    color: #333;
+    text-align: left;
+}
+
+.user-table td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-table tbody tr:hover {
+    background: #fff6e6;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-edit {
+    background: #fab050;
+    color: white;
+}
+
+.btn-edit:hover {
+    background: #f2a237;
+}
+
+.btn-delete {
+    background: #e05b5b;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #c94b4b;
+}
+
+
+/* === SERVIÇOS ===*/
+.status {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.status-pendente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-concluido {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-cancelado {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.btn-status {
+    background-color:#e89dc3;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}

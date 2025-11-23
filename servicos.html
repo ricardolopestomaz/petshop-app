@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamentos</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header-user">
+        <a href="index.html" class="back-btn"> ← Voltar </a>
+        <h1 class="titulo">Agendamentos de Serviços</h1>
+    </header>
+
+    <main>
+        <section class="table-card">
+
+            <div class="top-actions">
+                <a href="agendarservico.html" class="btn-user" style="width: 230px;">
+                    + Novo Serviço
+                </a>
+            </div>
+
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Animal</th>
+                        <th>Serviço</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Preço</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <!-- TESTE: Retirar depois pelo backend-->
+                    <tr>
+                        <td>Luke</td>
+                        <td>Banho Premium</td>
+                        <td>25/11/2025</td>
+                        <td>14:30</td>
+                        <td>R$ 40,00</td>
+                        <td>
+                            <span class="status status-pendente">Pendente</span>
+                        </td>
+                        <td class="acoes">
+                            <a href="editarserviço.html" class="btn-edit">Editar</a>
+                            <button class="btn-status">Mudar Status</button>
+                            <button class="btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Bela</td>
+                        <td>Consulta Clínica</td>
+                        <td>27/11/2025</td>
+                        <td>09:00</td>
+                        <td>R$ 120,00</td>
+                        <td>
+                            <span class="status status-concluido">Concluído</span>
+                        </td>
+                        <td class="acoes">
+                            <a href="editarserviço.html" class="btn-edit">Editar</a>
+                            <button class="btn-status">Mudar Status</button>
+                            <button class="btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Mel</td>
+                        <td>Vacina</td>
+                        <td>30/11/2025</td>
+                        <td>16:00</td>
+                        <td>R$ 70,00</td>
+                        <td>
+                            <span class="status status-cancelado">Cancelado</span>
+                        </td>
+                        <td class="acoes">
+                            <a href="editarserviço.html" class="btn-edit">Editar</a>
+                            <button class="btn-status">Mudar Status</button>
+                            <button class="btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+
+</body>
+</html>

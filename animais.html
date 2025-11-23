@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animais Cadastrados</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header-user">
+      <a href="index.html" class="back-btn"> ← Voltar </a>
+      <h1 class="titulo">Animais Cadastrados</h1>
+    </header>
+
+    <main>
+      <section class="table-card">
+        <div class="top-actions">
+          <a href="cadastroanimal.html" class="btn-user" style="width: 220px"
+            >+ Cadastrar Novo Animal</a
+          >
+        </div>
+
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Espécie</th>
+              <th>Raça</th>
+              <th>Idade</th>
+              <th>Peso</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- Exemplo: depois substitui pelos dados do backend -->
+            <tr>
+              <td>Luke</td>
+              <td>Cachorro</td>
+              <td>Pitbull</td>
+              <td>4 anos</td>
+              <td>28,5 kg</td>
+              <td class="acoes">
+                <a href="editaranimal.html" class="btn-edit">Editar</a>
+
+                <button class="btn-delete">Excluir</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Bela</td>
+              <td>Gato</td>
+              <td>Siamês</td>
+              <td>6 anos</td>
+              <td>4,2 kg</td>
+              <td class="acoes">
+                <a href="editaranimal.html" class="btn-edit">Editar</a>
+
+                <button class="btn-delete">Excluir</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

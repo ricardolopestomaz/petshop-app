@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuários Cadastrados</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header-user">
+        <a href="index.html" class="back-btn"> ← Voltar </a>
+        <h1 class="titulo">Usuários Cadastrados</h1>
+    </header>
+
+    <main>
+        <section class="table-card">
+
+            <div class="top-actions">
+                <a href="cadastrousuario.html" class="btn-user" style="width: 220px;">+ Cadastrar Novo Usuário</a>
+            </div>
+
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- TESTE: Depois precisa excluir essa parte para utilizar o backend -->
+                    <tr>
+                        <td>Maria Silva</td>
+                        <td>123.456.789-00</td>
+                        <td>maria@gmail.com</td>
+                        <td>(63) 9999-9999</td>
+                        <td class="acoes">
+                            <a href="editarusuario.html" class="btn-edit">Editar</a>
+                            <button class="btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>João Pereira</td>
+                        <td>987.654.321-00</td>
+                        <td>joaop@gmail.com</td>
+                        <td>(63) 9999-9999</td>
+                        <td class="acoes">
+                            <a href="editarusuario.html" class="btn-edit">Editar</a>
+                            <button class="btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+
+</body>
+</html>
