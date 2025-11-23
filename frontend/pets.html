@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <h1><i class="fas fa-paw"></i> PetManager</h1>
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="clientes.html"><i class="fas fa-users"></i> Clientes</a>
+        <a href="pets.html" class="active"><i class="fas fa-dog"></i> Pets</a>
+        <a href="servicos.html"><i class="fas fa-shower"></i> Serviços</a>
+        <a href="agenda.html"><i class="fas fa-calendar-alt"></i> Agenda</a>
+    </nav>
+    <main id="pets-page">
+        <h2><i class="fas fa-dog"></i> Gerenciar Pets</h2>
+        
+        <button class="btn btn-primary" onclick="toggleForm('form-section', true)" style="margin: 20px 0;">
+            <i class="fas fa-plus"></i> Novo Pet
+        </button>
+
+        <div id="form-section" class="form-container">
+            <h3><i class="fas fa-paw"></i> Cadastro de Pet</h3>
+            <form id="main-form">
+                <input type="hidden" id="edit-id">
+                <div class="input-group">
+                    <label>Dono (Cliente)</label>
+                    <select id="usuarioId" required><option value="">Selecione...</option></select>
+                </div>
+                <div class="input-group">
+                    <label>Nome do Pet</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="input-group">
+                    <label>Tipo</label>
+                    <select id="tipo" required>
+                        <option value="CACHORRO">Cachorro</option>
+                        <option value="GATO">Gato</option>
+                        <option value="AVE">Ave</option>
+                        <option value="OUTRO">Outro</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Raça</label>
+                    <input type="text" id="raca">
+                </div>
+                <div class="input-group">
+                    <label>Idade / Peso</label>
+                    <div style="display:flex; gap:10px;">
+                        <input type="number" id="idade" placeholder="Anos">
+                        <input type="number" id="peso" step="0.01" placeholder="Kg">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Salvar</button>
+                <button type="button" class="btn btn-danger" onclick="toggleForm('form-section', false)">Cancelar</button>
+            </form>
+        </div>
+
+        <div id="list-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Tipo</th>
+                        <th>Raça</th>
+                        <th>Dono</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

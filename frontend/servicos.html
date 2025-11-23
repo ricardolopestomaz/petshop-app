@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Serviços e Categorias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <h1><i class="fas fa-paw"></i> PetManager</h1>
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="clientes.html"><i class="fas fa-users"></i> Clientes</a>
+        <a href="pets.html"><i class="fas fa-dog"></i> Pets</a>
+        <a href="servicos.html" class="active"><i class="fas fa-shower"></i> Serviços</a>
+        <a href="agenda.html"><i class="fas fa-calendar-alt"></i> Agenda</a>
+    </nav>
+    <main id="servicos-page">
+        <h2><i class="fas fa-concierge-bell"></i> Catálogo de Serviços</h2>
+        
+        <div id="action-buttons" style="margin: 20px 0; display: flex; gap: 10px;">
+            <button class="btn btn-primary" onclick="toggleForm('form-section', true)">
+                <i class="fas fa-plus"></i> Novo Serviço
+            </button>
+            <button class="btn btn-secondary" onclick="toggleView('categorias')">
+                <i class="fas fa-tags"></i> Gerenciar Categorias
+            </button>
+        </div>
+
+        <div id="view-servicos">
+            <div id="form-section" class="form-container">
+                <h3>Cadastro de Serviço</h3>
+                <form id="main-form">
+                    <input type="hidden" id="edit-id">
+                    
+                    <div class="input-group">
+                        <label>Nome do Serviço</label>
+                        <input type="text" id="nome" required placeholder="Ex: Banho Premium">
+                    </div>
+                    <div class="input-group">
+                        <label>Categoria</label>
+                        <select id="tipoServicoId" required>
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Descrição</label>
+                        <input type="text" id="descricao">
+                    </div>
+                    <div class="input-group">
+                        <label>Preço / Duração</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="number" id="preco" step="0.50" required placeholder="R$">
+                            <input type="number" id="duracao" required placeholder="Minutos">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar Serviço</button>
+                    <button type="button" class="btn btn-danger" onclick="toggleForm('form-section', false)">Cancelar</button>
+                </form>
+            </div>
+
+            <div id="list-section">
+                <h3>Lista de Serviços</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Serviço</th>
+                            <th>Categoria</th>
+                            <th>Preço</th>
+                            <th>Duração</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="view-categorias" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3><i class="fas fa-tags"></i> Categorias Cadastradas</h3>
+                <button class="btn btn-secondary" onclick="toggleView('servicos')">Voltar para Serviços</button>
+            </div>
+
+            <button class="btn btn-primary" onclick="toggleForm('category-form-section', true)" style="margin-bottom: 20px;">
+                <i class="fas fa-plus"></i> Nova Categoria
+            </button>
+
+            <div id="category-form-section" class="form-container">
+                <h3>Cadastro de Categoria</h3>
+                <form id="categoria-form">
+                    <input type="hidden" id="cat-edit-id">
+                    <div class="input-group">
+                        <label>Nome da Categoria</label>
+                        <input type="text" id="cat-nome" required placeholder="Ex: Estética">
+                    </div>
+                    <div class="input-group">
+                        <label>Descrição</label>
+                        <input type="text" id="cat-desc" placeholder="Descrição opcional">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar Categoria</button>
+                    <button type="button" class="btn btn-danger" onclick="toggleForm('category-form-section', false)">Cancelar</button>
+                </form>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="cat-table-body"></tbody>
+            </table>
+        </div>
+
+    </main>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Script extra apenas para troca de abas visual
+        function toggleView(view) {
+            document.getElementById('view-servicos').style.display = view === 'servicos' ? 'block' : 'none';
+            document.getElementById('view-categorias').style.display = view === 'categorias' ? 'block' : 'none';
+            // Esconde botões principais se estiver em categorias
+            document.getElementById('action-buttons').style.display = view === 'servicos' ? 'flex' : 'none';
+        }
+    </script>
+</body>
+</html>

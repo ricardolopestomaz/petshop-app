@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>PetManager - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <h1><i class="fas fa-paw"></i> PetManager</h1>
+        <a href="index.html" class="active"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="clientes.html"><i class="fas fa-users"></i> Clientes</a>
+        <a href="pets.html"><i class="fas fa-dog"></i> Pets</a>
+        <a href="servicos.html"><i class="fas fa-shower"></i> Serviços</a>
+        <a href="agenda.html"><i class="fas fa-calendar-alt"></i> Agenda</a>
+    </nav>
+    <main id="dashboard-page">
+        <h2><i class="fas fa-chart-line"></i> Visão Geral</h2>
+        <div class="dashboard-grid">
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3><span id="total-clientes">0</span></h3>
+                <p>Clientes Cadastrados</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-paw"></i>
+                <h3><span id="total-pets">0</span></h3>
+                <p>Pets Registrados</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-calendar-check"></i>
+                <h3><span id="agenda-hoje">0</span></h3>
+                <p>Agendamentos Hoje</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-list-ul"></i>
+                <h3><span id="total-agenda">0</span></h3>
+                <p>Total Agendamentos</p>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <h1><i class="fas fa-paw"></i> PetManager</h1>
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="clientes.html"><i class="fas fa-users"></i> Clientes</a>
+        <a href="pets.html"><i class="fas fa-dog"></i> Pets</a>
+        <a href="servicos.html"><i class="fas fa-shower"></i> Serviços</a>
+        <a href="agenda.html" class="active"><i class="fas fa-calendar-alt"></i> Agenda</a>
+    </nav>
+    <main id="agenda-page">
+        <h2><i class="far fa-calendar-alt"></i> Agendamentos</h2>
+        
+        <div id="action-buttons" style="margin: 20px 0;">
+            <button class="btn btn-primary" onclick="toggleForm('form-section', true)">
+                <i class="fas fa-plus"></i> Novo Agendamento
+            </button>
+        </div>
+
+        <div id="form-section" class="form-container">
+            <h3>Agendar Horário</h3>
+            <form id="main-form">
+                <input type="hidden" id="edit-id">
+
+                <div class="input-group">
+                    <label>Cliente / Pet</label>
+                    <select id="petId" required><option value="">Selecione o pet...</option></select>
+                </div>
+                <div class="input-group">
+                    <label>Serviço</label>
+                    <select id="servicoId" required><option value="">Selecione o serviço...</option></select>
+                </div>
+                <div class="input-group">
+                    <label>Data e Hora</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="date" id="data" required>
+                        <input type="time" id="hora" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Observações</label>
+                    <input type="text" id="obs">
+                </div>
+                <button type="submit" class="btn btn-primary">Agendar / Salvar</button>
+                <button type="button" class="btn btn-danger" onclick="toggleForm('form-section', false)">Cancelar</button>
+            </form>
+        </div>
+
+        <div id="list-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data/Hora</th>
+                        <th>Pet</th>
+                        <th>Serviço</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <h1><i class="fas fa-paw"></i> PetManager</h1>
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="clientes.html" class="active"><i class="fas fa-users"></i> Clientes</a>
+        <a href="pets.html"><i class="fas fa-dog"></i> Pets</a>
+        <a href="servicos.html"><i class="fas fa-shower"></i> Serviços</a>
+        <a href="agenda.html"><i class="fas fa-calendar-alt"></i> Agenda</a>
+    </nav>
+    <main id="clientes-page">
+        <h2><i class="fas fa-users"></i> Gerenciar Clientes</h2>
+        
+        <button class="btn btn-primary" onclick="toggleForm('form-section', true)" style="margin: 20px 0;">
+            <i class="fas fa-plus"></i> Novo Cliente
+        </button>
+
+        <div id="form-section" class="form-container">
+            <h3><i class="fas fa-user-plus"></i> Cadastro de Cliente</h3>
+            <form id="main-form">
+                <input type="hidden" id="edit-id">
+                <div class="input-group">
+                    <label>Nome Completo</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="input-group">
+                    <label>Telefone</label>
+                    <input type="text" id="telefone" required>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Salvar</button>
+                <button type="button" class="btn btn-danger" onclick="toggleForm('form-section', false)"><i class="fas fa-times"></i> Cancelar</button>
+            </form>
+        </div>
+
+        <div id="list-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
